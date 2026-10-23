@@ -1,0 +1,10 @@
+services:
+  mail-test:
+    image: greenmail/standalone:2.1.3
+    command:
+      - -Dgreenmail.setup.test.all
+      - -Dgreenmail.hostname=0.0.0.0
+      - -Dgreenmail.users=dev:dev@example.com
+    ports:
+      - "127.0.0.1:1025:3025"
+      - "127.0.0.1:1143:3143"
